@@ -16,6 +16,7 @@ public class ShapeBase : MonoBehaviour, IPointerDownHandler, IPointerClickHandle
     private void Awake()
     {
         //myMaterial = gameObject.GetComponent<Material>();
+        RandomColor();
         myMaterial.color = color;
     }
     //These functions handle mouse interaction
@@ -43,5 +44,13 @@ public class ShapeBase : MonoBehaviour, IPointerDownHandler, IPointerClickHandle
     public void OnPointerEnter(PointerEventData eventData)
     {
         //blanck
+    }
+
+    private void RandomColor()
+    {
+        color.r = Random.Range(0f, 1f);
+        color.g = Random.Range(0f, 1f);
+        color.b = Random.Range(0f, 1f);
+        color.a = 1f;
     }
 }
