@@ -5,11 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ShapeBase : MonoBehaviour, IPointerDownHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
-    private Color m_color;
+    private Color m_color; //Encapsulation
     public Color Color { get { return m_color;} set { m_color = value; } }
-
-    public string ShapeName { get => shapeName; set => shapeName = value; }
-    private string shapeName = "Base Shape";
 
     public Material myMaterial;
 

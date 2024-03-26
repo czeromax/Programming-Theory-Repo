@@ -14,7 +14,7 @@ public class LastChildShape : ShapeBase
     private void Awake()
     {
         shapeRb = gameObject.GetComponent<Rigidbody>();
-        FindOtherShapes();
+        FindOtherShapes();//Abstractoin
     }
 
     public override void OnPointerDown(PointerEventData eventData)

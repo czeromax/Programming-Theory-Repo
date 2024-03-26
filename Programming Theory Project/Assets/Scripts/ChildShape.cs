@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ChildShape : ShapeBase
+public class ChildShape : ShapeBase //Inheritence
 {
     [SerializeField] private Rigidbody shapeRb;
     [SerializeField] private float clickForce = 2.0f;
@@ -13,7 +13,7 @@ public class ChildShape : ShapeBase
         shapeRb = gameObject.GetComponent<Rigidbody>();
         RandomColor();
     }
-
+    //Polymorphism
     public override void OnPointerDown(PointerEventData eventData)
     {
         base.OnPointerDown(eventData);
